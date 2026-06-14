@@ -1,0 +1,7 @@
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]
+# Windows release builds target the deploy box (Ryzen 7800X3D, Win 11) via
+#   rustup target add x86_64-pc-windows-msvc   (done on the Windows host).
+# The offline pipeline crates also build/test on macOS/Linux for development;
+# we don't force-install the msvc target here so dev `cargo test` stays fast.

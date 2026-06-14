@@ -1,0 +1,22 @@
+[package]
+name = "coach-rt"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Real-time 60 Hz cue engine and WASAPI audio thread (Windows-only; scaffolded)."
+
+[dependencies]
+coach-core.workspace = true
+thiserror.workspace = true
+
+# Real-time audio + lock-free ring are Windows-only (WASAPI). Gated so the
+# offline pipeline builds everywhere; the live engine lands in a Windows increment.
+[target.'cfg(windows)'.dependencies]
+cpal = "0.15"
+rtrb = "0.3"
+
+[lints]
+workspace = true

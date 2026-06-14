@@ -1,0 +1,18 @@
+[package]
+name = "coach-analysis"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Resampling, track profiling, reference model, and the diagnosis engine."
+
+[dependencies]
+coach-core.workspace = true
+coach-telemetry.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true

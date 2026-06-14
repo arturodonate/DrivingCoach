@@ -1,0 +1,21 @@
+[package]
+name = "coach-cue"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Cue templates, plan compiler, trigger back-integration, arbiter, and Piper TTS cache."
+
+[dependencies]
+coach-core.workspace = true
+coach-analysis.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+hex.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true

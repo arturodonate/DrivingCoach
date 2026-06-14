@@ -1,0 +1,15 @@
+[package]
+name = "coach-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Core domain types for the DrivingCoach sim-racing coaching system."
+
+[dependencies]
+serde.workspace = true
+
+[lints]
+workspace = true

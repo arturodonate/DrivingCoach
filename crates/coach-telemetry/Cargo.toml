@@ -1,0 +1,24 @@
+[package]
+name = "coach-telemetry"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "AC shared-memory ingestion, integrity checks, lap recorder, and replay."
+
+[dependencies]
+coach-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+bincode.workspace = true
+thiserror.workspace = true
+
+# Live AC ingestion is Windows-only. AC publishes its pages as *named*
+# page-file-backed mappings (`Local\acpmf_*`), which we open with minimal Win32
+# FFI (OpenFileMappingW + MapViewOfFile) — see src/live.rs. `memmap2` maps
+# on-disk files and cannot open these named mappings, so it is not used here.
+
+[lints]
+workspace = true

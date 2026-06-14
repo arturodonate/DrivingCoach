@@ -1,0 +1,29 @@
+# Rust
+/target
+**/*.rs.bk
+Cargo.lock.orig
+
+# Cargo.lock IS committed — this workspace produces a binary application.
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Downloaded Piper voice models (CC BY-NC 4.0 — never committed; see docs/LICENSING.md)
+/voices/
+*.onnx
+*.onnx.json
+
+# Runtime data: databases, recordings, generated session reports
+*.db
+*.db-wal
+*.db-shm
+/recordings/
+/reports/
+/data/
+
+# Editor / tooling
+.idea/
+.vscode/
+*.swp
+docs/sim-racing-coaching-system-design-v1.3.md
